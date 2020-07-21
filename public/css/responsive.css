@@ -1,0 +1,239 @@
+@media only screen and (max-width: 640px) {
+  .header_area .main-menu .navbar,
+  .header_area .main-menu .navbar .navbar-brand,
+  .site-main .subscribe-us,
+  .site-main .aboutus,
+  .site-main .brand-area,
+  .site-main .services,
+  .site-main .services .services-title,
+  .site-main .brand-area .experience,
+  .site-main .brand-area .experience .years-area,
+  .site-main .project,
+  .site-main .aboutme {
+    padding: 2%;
+    margin: 0%;
+  }
+  .site-main .services,
+  .site-main .aboutme {
+    margin-top: 7rem;
+  }
+  .site-main .services .services-list .row > div {
+    display: flex;
+    justify-content: center;
+  }
+  .site-main .services .service .service-img > img {
+    width: 90%;
+  }
+  .site-main .services .service {
+    padding: 1rem 0;
+    width: 13rem;
+  }
+  .site-main .site-banner .site-title h1,
+  .site-main .project .project-title > h1,
+  .site-main .aboutus .about-title h2 > span,
+  .site-main .services .services-title > h1,
+  .site-main .aboutme .about-title .title-h1 {
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
+  .site-main .brand-area .experience .call-area {
+    padding-left: 30%;
+  }
+  .site-main .brand-area .experience .bg-panel {
+    position: absolute;
+    left: -225px;
+    top: 0%;
+    background: #e0292911;
+    width: 230px;
+    height: 400px;
+    margin-left: 340px;
+    z-index: -1;
+  }
+  .site-main .project .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: inherit;
+    padding: 0%;
+    margin-bottom: 2rem;
+  }
+  .site-main .brand-area .experience .years-area {
+    background: url(../img/frame.svg) no-repeat 10px 0px;
+  }
+  .site-main .brand-area .experience .years-area .years {
+    font-size: 54px;
+  }
+  .site-main .brand-area .experience .years-area h2,
+  .site-main .brand-area .experience .years-area h2 > span {
+    font-size: 20px;
+  }
+  .site-main .subscribe-us .subscribe form .row {
+    width: 100%;
+    flex-direction: column;
+    margin: 0px;
+  }
+  .site-main .subscribe-us .subscribe .subscribe-title {
+    padding-left: 0px;
+    padding-top: 5vw;
+  }
+  .site-main .subscribe-us .subscribe .subscribe-title p {
+    padding: 2vw;
+  }
+  .site-main .subscribe-us .subscribe form .row > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .site-main .subscribe-us .subscribe form .input-textbox input {
+    width: 100%;
+  }
+  .site-main .subscribe-us {
+    width: 100%;
+    height: 30rem;
+    margin: 2rem 0px;
+  }
+  .site-main .subscribe-us .subscribe {
+    background: var(--gradient-color);
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .site-main .subscribe-us .subscribe > div {
+    height: 100%;
+    padding: 1rem;
+  }
+  .site-main .subscribe-us .subscribe .d-sm-flex {
+    width: 100%;
+  }
+  .site-main .subscribe-us .subscribe form {
+    width: 100%;
+    height: 100%;
+  }
+  .site-main .subscribe-us .subscribe form > div {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 920px) {
+  .header_area .main-menu .navbar,
+  .header_area .main-menu .navbar .navbar-brand,
+  .site-main .subscribe-us,
+  .site-main .aboutus,
+  .site-main .brand-area,
+  .site-main .services,
+  .site-main .services .services-title,
+  .site-main .brand-area .experience,
+  .site-main .brand-area .experience .years-area,
+  .site-main .project,
+  .site-main .aboutme {
+    padding: 1rem 2rem;
+    margin: 0rem;
+  }
+
+  .site-main .services,
+  .site-main .aboutme {
+    margin-top: 7rem;
+    width: 100%;
+  }
+  .site-main .services .services-list .row > div {
+    display: flex;
+    justify-content: center;
+  }
+  .site-main .services .service .service-img > img {
+    width: 90%;
+  }
+  .site-main .services .service {
+    padding: 1rem 0;
+    width: 80vw;
+  }
+  .site-main .site-banner .site-title h1,
+  .site-main .project .project-title > h1,
+  .site-main .aboutus .about-title h2 > span,
+  .site-main .services .services-title > h1,
+  .site-main .aboutme .about-title .title-h1 {
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
+  .site-main .brand-area .experience .call-area {
+    padding-left: 30%;
+  }
+  .site-main .brand-area .experience .bg-panel {
+    position: absolute;
+    left: -180px;
+    top: 0%;
+    background: #e0292911;
+    width: 60vw;
+    height: 400px;
+    margin-left: 340px;
+    z-index: -1;
+  }
+  .site-main .project .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: inherit;
+    padding: 0%;
+    margin-bottom: 2rem;
+  }
+  .site-main .brand-area .experience .years-area {
+    background: url(../img/frame.svg) no-repeat 10px 0px;
+  }
+  .site-main .brand-area .experience .years-area .years {
+    font-size: 80px;
+  }
+  .site-main .brand-area .experience .years-area h2,
+  .site-main .brand-area .experience .years-area h2 > span {
+    padding-left: 3.5vw;
+    padding-bottom: 2vw;
+    font-size: 30px;
+  }
+  .site-main .subscribe-us .subscribe form .row {
+    width: 100%;
+    flex-direction: column;
+    margin: 0px;
+  }
+  .site-main .subscribe-us .subscribe .subscribe-title {
+    padding-left: 0px;
+    padding-top: 5vw;
+  }
+  .site-main .subscribe-us .subscribe .subscribe-title p {
+    padding: 2vw;
+  }
+  .site-main .subscribe-us .subscribe form .row > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .site-main .subscribe-us .subscribe form .input-textbox input {
+    width: 100%;
+  }
+  .site-main .subscribe-us {
+    width: 100%;
+    height: 30rem;
+    margin: 2rem 0px;
+  }
+  .site-main .subscribe-us .subscribe {
+    background: var(--gradient-color);
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .site-main .subscribe-us .subscribe > div {
+    height: 100%;
+    padding: 1rem;
+  }
+  .site-main .subscribe-us .subscribe .d-sm-flex {
+    width: 100%;
+  }
+  .site-main .subscribe-us .subscribe form {
+    width: 100%;
+    height: 100%;
+  }
+  .site-main .subscribe-us .subscribe form > div {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CompanyApp">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gamatechno | Products</title>
+    <link rel="shortcut icon" href="/icons/favico.ico" type="image/x-icon" />
+    <!-- Bootstrap core CSS -->
+    <link href="/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/admin/css/style.css" rel="stylesheet" />
+    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+  </head>
+  <body ng-controller="AdminController">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Gamatechno</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/halaman_team">Team</a></li>
+            <li class="active"><a href="/products">Products</a></li>
+            <li><a href="/clients">Clients</a></li>
+            <li><a href="/admin_editabout">About & Visi Misi</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Welcome, {{username}}</a></li>
+            <li><a href="/login">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <h1>
+              <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+              Products
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li class="active">Products</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="list-group">
+              <a href="/dashboard" class="list-group-item">
+                <span
+                  class="glyphicon glyphicon-cog"
+                  style="color: #8c66de;"
+                  aria-hidden="true"
+                ></span>
+                Dashboard
+              </a>
+              <a href="/halaman_team" class="list-group-item"
+                ><span
+                  class="glyphicon glyphicon-user"
+                  style="color: #8c66de;"
+                  aria-hidden="true"
+                ></span>
+                Team
+                <span class="badge" style="background-color: #8c66de;"
+                  >{{ teams.length }}</span
+                ></a
+              >
+              <a href="/products" class="list-group-item active main-color-bg"
+                ><span
+                  class="glyphicon glyphicon-phone"
+                  style="color: #fff;"
+                  aria-hidden="true"
+                ></span>
+                Products
+                <span
+                  class="badge"
+                  style="background-color: rgb(255, 255, 255);"
+                  >{{products.length}}</span
+                ></a
+              >
+              <a href="/clients" class="list-group-item"
+                ><span
+                  class="glyphicon glyphicon-briefcase"
+                  style="color: #8c66de;"
+                  aria-hidden="true"
+                ></span>
+                Clients
+                <span class="badge" style="background-color: #8c66de;"
+                  >{{clients.length}}</span
+                ></a
+              >
+              <a href="/admin_editabout" class="list-group-item"
+                ><span
+                  class="glyphicon glyphicon-user"
+                  style="color: #8c66de;"
+                  aria-hidden="true"
+                ></span>
+                About & Visi Misi
+                <span class="badge" style="background-color: #8c66de;"></span
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <!-- Gamatechno Overview -->
+            <div class="panel panel-default">
+              <div class="panel-heading main-color-bg">
+                <h3 class="panel-title">Products</h3>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <a
+                      href="/admin_inputproducts"
+                      class="btn btn-primary"
+                      role="button"
+                      aria-pressed="true"
+                      style="margin-bottom: 5px;"
+                      ><span class="glyphicon glyphicon-plus"></span> Add
+                      Products</a
+                    >
+                  </div>
+                  <div class="col-md-12">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Search Products..."
+                      ng-model="searchText"
+                    />
+                  </div>
+                </div>
+                <br />
+                <table class="table table-striped table-hover">
+                  <tr>
+                    <th>Nama</th>
+                    <th>Lokasi</th>
+                    <th>Deskripsi</th>
+                    <th>Tag</th>
+                    <th></th>
+                  </tr>
+                  <tr ng-repeat="a in products | filter:searchText">
+                    <td>{{a.nama}}</td>
+                    <td>{{a.lokasi}}</td>
+                    <td>{{a.deskripsi}}</td>
+                    <td>{{a.tag}}</td>
+                    <td>
+                      <div class="input-group">
+                        <a
+                          class="btn btn-default form-control"
+                          href="/admin_editproducts?id={{a._id}}"
+                          >Edit</a
+                        >
+                        <input
+                          type="submit"
+                          class="btn btn-danger form-control"
+                          value="Delete"
+                          ng-click="deletePro(a._id)"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr ng-if="products.length == 0">
+                    <td colspan="4">Data tidak ditemukan</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+      <p style="color: white;" ; align="center">Copyright AS, &copy; 2020</p>
+    </nav>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/admin/js/bootstrap.min.js"></script>
+
+    <!--  Angular JS -->
+    <script src="/assets/angular.min.js"></script>
+    <script src="/app/controller/controller.js"></script>
+  </body>
+</html>

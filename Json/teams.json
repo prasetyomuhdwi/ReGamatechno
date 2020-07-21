@@ -1,0 +1,6 @@
+{"_id":{"$oid":"5f02aa0687b90b0624bae508"},"nama":"Aditya Salman","divisi":"Backend","nim":"18.11.2368","lokasi":"18.11.2368.jpg","modified":{"$date":"2020-07-06T04:35:18.469Z"},"__v":0}
+{"_id":{"$oid":"5f02ab9987b90b0624bae509"},"nama":"Muhammad Dwi Prasetyo","divisi":"Frontend Landing Page","nim":"18.11.2365","lokasi":"18_11_2365.jpg","modified":{"$date":"2020-07-06T04:42:01.87Z"},"__v":0}
+{"_id":{"$oid":"5f092676db25180f06cc14de"},"nama":"Anggi Nur Widianingsih","divisi":"Designer","nim":"18.11.2363","lokasi":"18_11_2363.jpg","modified":{"$date":"2020-07-11T02:39:50.294Z"},"__v":0}
+{"_id":{"$oid":"5f09268ddb25180f06cc14df"},"nama":"Miranda Surya Arsyad","divisi":"Frontend Landing Page","nim":"18.11.2369","lokasi":"18_11_2369.jpg","modified":{"$date":"2020-07-11T02:40:13.563Z"},"__v":0}
+{"_id":{"$oid":"5f0926bcdb25180f06cc14e0"},"nama":"Toyib Abdul Karim","divisi":"Speaker","nim":"18.11.2364","lokasi":"18_11_2364.jpg","modified":{"$date":"2020-07-11T02:41:00.334Z"},"__v":0}
+{"_id":{"$oid":"5f0926d9db25180f06cc14e1"},"nama":"Reza Monika","divisi":"Frontend Admin","nim":"18.11.2366","lokasi":"18_11_2366.jpg","modified":{"$date":"2020-07-11T02:41:29.483Z"},"__v":0}
